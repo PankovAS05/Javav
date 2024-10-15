@@ -1,0 +1,471 @@
+import java.util.Random;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Создаем объекты для каждого модуля
+        Module1 module1 = new Module1();
+        Module2 module2 = new Module2();
+        Module3 module3 = new Module3();
+        Module4 module4 = new Module4();
+
+
+//        System.out.println("Задача 1 Модуль 1");
+//        System.out.print("Введите число (Сумма двух последних): ");
+//        int inputNumber = scanner.nextInt();
+//        System.out.println("Решение задачи Module 1, Task 1:");
+//        System.out.println("Сумма двух последних цифр числа: " + module1.task1(inputNumber));
+//
+//        System.out.println("Задача 2 Модуль 1");
+//        System.out.print("Введите число (проверка на положительное): ");
+//        int inputNumber2 = scanner.nextInt();
+//        System.out.println("Число положительное? " + module1.task2(inputNumber2));
+//
+//        System.out.println("Задача 3 Модуль 1");
+//        System.out.print("Введите символ (проверка на заглавную букву): ");
+//        char inputChar = scanner.next().charAt(0);
+//        System.out.println("Это заглавная буква? " + module1.task3(inputChar));
+//
+//        System.out.println("Задача 4 Модуль 1");
+//        System.out.print("Введите первое число (проверка на делитель): ");
+//        int a = scanner.nextInt();
+//        System.out.print("Введите второе (проверка на делитель): ");
+//        int b = scanner.nextInt();
+//        System.out.println("Является ли одно из чисел делителем другого? " + module1.task4(a, b));
+//
+//        System.out.println("Задача 5 Модуль 1");
+//        System.out.println("Введите пять чисел для последовательного сложения по последней цифре: ");
+//        int sum = 0;
+//        int num1 = scanner.nextInt();
+//        for (int i = 0; i < 4; i++) {
+//            int num2 = scanner.nextInt();
+//            sum = module1.task5(num1, num2);
+//            num1 = sum;
+//        }
+//        System.out.println("Итоговая сумма последних цифр: " + sum);
+//
+//        System.out.println("Задача 1 Модуль 2");
+//        System.out.print("Введите первое число (делимое) для безопасного деления: ");
+//        int x = scanner.nextInt();
+//        System.out.println("Введите второе число (делитель) для безопасного деления: ");
+//        int y = scanner.nextInt();
+//        System.out.println("Результат безопасного деления: " + module2.safeDiv(x, y));
+//
+//        System.out.println("Задача 2 Модуль 2");
+//        System.out.print("Введите первое число для сравнения: ");
+//        int sr1 = scanner.nextInt();
+//        System.out.print("Введите второе число для сравнения: ");
+//        int sr2 = scanner.nextInt();
+//        System.out.println("Результат сравнения: " + module2.makeDecision(sr1, sr2));
+//
+//        System.out.println("Задача 3 Модуль 2");
+//        System.out.print("Введите первое число: ");
+//        int numb1 = scanner.nextInt();
+//        System.out.print("Введите второе число: ");
+//        int numb2 = scanner.nextInt();
+//        System.out.print("Введите третье число: ");
+//        int numb3 = scanner.nextInt();
+//        System.out.println("Можно ли сложить два числа, чтобы получить третье? " + module2.sum3(numb1, numb2, numb3));
+//
+//        System.out.println("Задача 4 Модуль 2");
+//        System.out.print("Введите возраст: ");
+//        int age = scanner.nextInt();
+//        System.out.println("Возраст: " + module2.age(age));
+//
+//        System.out.println("Задача 5 Модуль 2");
+//        System.out.print("Введите день недели: ");
+//        String day = scanner.nextLine().toLowerCase();
+//        module2.printDays(day);
+//
+//        System.out.println("Задача 1 Модуль 3");
+//        System.out.print("Введите число: ");
+//        int num = scanner.nextInt();
+//        System.out.println("Результат: " + module3.reverseListNums(num));
+//
+//        System.out.println("Задача 2 Модуль 3");
+//        System.out.print("Введите число (основание степени): ");
+//        int base = scanner.nextInt();  // Переменная для числа (основания степени)
+//        System.out.print("Введите степень: ");
+//        int exponent = scanner.nextInt();  // Переменная для степени
+//        System.out.println("Результат: " + module3.pow(base, exponent));
+//
+//        System.out.println("Задача 3 Модуль 3");
+//        System.out.print("Введите число: ");
+//        int num_ck = scanner.nextInt();  // Переменная для числа
+//        System.out.println("Результат: " + module3.equalNum(num_ck));
+//
+//        System.out.println("Задача 4 Модуль 3");
+//        System.out.print("Введите высоту треугольника: ");
+//        int h = scanner.nextInt();  // Переменная для высоты треугольника
+//        module3.leftTriangle(h);  // Вызываем метод для отображения треугольника
+//
+//        System.out.println("Задача 5 Модуль 3");
+//        module3.guessGame();
+//
+//        System.out.println("Задача 1 Модуль 4");
+//        System.out.print("Введите количество элементов в массиве: ");
+//        int n = scanner.nextInt();
+//        int[] arr = new int[n];
+//        System.out.println("Введите элементы массива:");
+//        for (int i = 0; i < n; i++) {
+//            arr[i] = scanner.nextInt();
+//        }
+//        System.out.print("Введите число для поиска: ");
+//        int u = scanner.nextInt();
+//        int result = module4.findLast(arr, u);
+//        System.out.println("Индекс последнего вхождения: " + result);
+//
+//        System.out.println("Задача 2 Модуль 4");
+//        System.out.print("Введите количество элементов в массиве: ");
+//        int g = scanner.nextInt();
+//        int[] array = new int[g];
+//        System.out.println("Введите элементы массива:");
+//        for (int i = 0; i < g; i++) {
+//            array[i] = scanner.nextInt();
+//        }
+//        System.out.print("Введите значение для вставки: ");
+//        int l = scanner.nextInt();
+//        System.out.print("Введите позицию для вставки (0 - " + g + "): ");
+//        int pos = scanner.nextInt();
+//        if (pos < 0 || pos > g) {
+//            System.out.println("Некорректная позиция для вставки!");
+//        } else {
+//            int[] res = module4.add(array, l, pos);
+//            System.out.print("Результат: [");
+//            for (int i = 0; i < res.length; i++) {
+//                System.out.print(res[i]);
+//                if (i < res.length - 1) {
+//                    System.out.print(", ");
+//                }
+//            }
+//            System.out.println("]");
+//        }
+
+//        System.out.println("Задача 3 Модуль 4");
+//        System.out.print("Введите количество элементов в массиве: ");
+//        int size = scanner.nextInt(); // Ввод размера массива
+//        int[] numbers = new int[size]; // Создание массива с новым именем
+//
+//        System.out.println("Введите элементы массива:");
+//        for (int i = 0; i < size; i++) {
+//            numbers[i] = scanner.nextInt(); // Ввод элементов массива
+//        }
+//        module4.reverse(numbers);
+//        System.out.print("Результат: arr = [");
+//        for (int i = 0; i < numbers.length; i++) {
+//            System.out.print(numbers[i]);
+//            if (i < numbers.length - 1) {
+//                System.out.print(", ");
+//            }
+//        }
+//        System.out.println("]");
+//
+//        System.out.println("Задача 4 Модуль 4");
+//        System.out.print("Введите количество элементов в первом массиве: ");
+//        int size1 = scanner.nextInt();
+//        int[] arr1 = new int[size1];
+//        System.out.println("Введите элементы первого массива:");
+//        for (int i = 0; i < size1; i++) {
+//            arr1[i] = scanner.nextInt();
+//        }
+//        System.out.print("Введите количество элементов во втором массиве: ");
+//        int size2 = scanner.nextInt();
+//        int[] arr2 = new int[size2];
+//        System.out.println("Введите элементы второго массива:");
+//        for (int i = 0; i < size2; i++) {
+//            arr2[i] = scanner.nextInt();
+//        }
+//        int[] resultArray = module4.concat(arr1, arr2);
+//        System.out.print("Результат: [");
+//        for (int i = 0; i < resultArray.length; i++) {
+//            System.out.print(resultArray[i]);
+//            if (i < resultArray.length - 1) {
+//                System.out.print(", ");
+//            }
+//        }
+//        System.out.println("]");
+//
+//        System.out.println("Задача 5 Модуль 4");
+//        System.out.print("Введите количество элементов в массиве: ");
+//        int arraySize = scanner.nextInt();
+//        int[] inputArray = new int[arraySize];
+//
+//        System.out.println("Введите элементы массива:");
+//        for (int i = 0; i < arraySize; i++) {
+//            inputArray[i] = scanner.nextInt();
+//        }
+//        int[] positiveArray = module4.deleteNegative(inputArray);
+//        System.out.print("Результат: [");
+//        for (int i = 0; i < positiveArray.length; i++) {
+//            System.out.print(positiveArray[i]);
+//            if (i < positiveArray.length - 1) {
+//                System.out.print(", ");
+//            }
+//        }
+//        System.out.println("]");
+    }
+}
+
+class Module1 {
+
+    // Задача 1:
+    public int task1(int x) {
+        return sumLastNums(x);  //
+    }
+    public int sumLastNums(int x) {
+        int lastDigit = x % 10;
+        x = x / 10;
+        int secondLastDigit = x % 10;
+        return lastDigit + secondLastDigit;
+    }
+
+    // Задача 2 модуля 1
+    public boolean task2(int x) {return isPositive(x);}
+    public boolean isPositive(int x) {return x > 0;}
+
+    //Задача 3 модуля 1
+    public boolean task3(char x) {return isUpperCase(x);}
+    public boolean isUpperCase(char x) {return x >= 'A' && x <= 'Z';}
+
+
+    //Задача 4 модуля 1
+    public boolean task4(int a, int b) {return isDivisor(a, b);}
+    public boolean isDivisor(int a, int b) {return a % b == 0 || b % a == 0;}
+
+
+    //Задача 5 модуля 1
+    public int task5(int a, int b) {return lastNumSum(a, b); }
+
+    // Метод lastNumSum для сложения цифр из разряда единиц двух чисел
+    public int lastNumSum(int a, int b) {
+        int lastA = a % 10;  // Последняя цифра числа a
+        int lastB = b % 10;  // Последняя цифра числа b
+        return lastA + lastB;
+    }
+}
+
+class Module2 {
+    public double safeDiv(int x, int y) {
+        // Проверка на деление на 0
+        if (y == 0) {
+            return 0;  // Возвращаем 0, если делитель равен 0
+        }
+        return (double) x / y;  // Выполняем деление, если делитель не равен 0
+    }
+
+    public String makeDecision(int x, int y) {
+        if (x > y) {
+            return x + " > " + y;  // Если x больше y
+        } else if (x < y) {
+            return x + " < " + y;  // Если x меньше y
+        } else {
+            return x + " == " + y; // Если x равно y
+        }
+    }
+
+    public boolean sum3(int x, int y, int z) {
+        // Проверяем все возможные комбинации сложения двух чисел для получения третьего
+        return (x + y == z) || (x + z == y) || (y + z == x);
+    }
+
+    public String age(int x) {
+        // Проверка на числа 11-14, которые являются исключениями
+        if (x % 100 >= 11 && x % 100 <= 14) {
+            return x + " лет";
+        }
+
+        // Проверка последней цифры числа
+        int lastDigit = x % 10;
+        if (lastDigit == 1) {
+            return x + " год";
+        } else if (lastDigit >= 2 && lastDigit <= 4) {
+            return x + " года";
+        } else {
+            return x + " лет";
+        }
+    }
+
+        public void printDays(String x){
+            switch (x) {
+                case "понедельник":
+                    System.out.println("понедельник");
+                case "вторник":
+                    System.out.println("вторник");
+                case "среда":
+                    System.out.println("среда");
+                case "четверг":
+                    System.out.println("четверг");
+                case "пятница":
+                    System.out.println("пятница");
+                case "суббота":
+                    System.out.println("суббота");
+                case "воскресенье":
+                    System.out.println("воскресенье");
+                    break;
+                default:
+                    System.out.println("это не день недели");
+                    break;
+            }
+        }
+    }
+
+class Module3 {
+    public String reverseListNums(int x) {
+        StringBuilder result = new StringBuilder(); // Используем StringBuilder для эффективного построения строки
+
+        for (int i = x; i >= 0; i--) {
+            result.append(i).append(" "); // Добавляем текущее число и пробел
+        }
+
+        return result.toString().trim(); // Возвращаем строку без лишних пробелов в конце
+    }
+
+    public int pow(int x, int y) {
+        int result = 1;  // Начинаем с 1, так как любое число в степени 0 равно 1
+
+        for (int i = 0; i < y; i++) {
+            result *= x;  // Умножаем result на x на каждой итерации
+        }
+
+        return result;  // Возвращаем результат
+    }
+
+    public boolean equalNum(int x) {
+        int lastDigit = x % 10;  // Сохраняем последнюю цифру числа
+
+        while (x != 0) {
+            int currentDigit = x % 10;  // Извлекаем последнюю цифру числа
+
+            if (currentDigit != lastDigit) {
+                return false;  // Если текущая цифра отличается от последней сохраненной - возвращаем false
+            }
+
+            x /= 10;  // Убираем последнюю цифру числа
+        }
+
+        return true;  // Все цифры оказались одинаковыми, возвращаем true
+    }
+
+    public void leftTriangle(int x) {
+        for (int i = 1; i <= x; i++) {  // Переменная i - номер строки
+            for (int j = 1; j <= i; j++) {  // Переменная j - количество звезд в строке
+                System.out.print("*");  // Выводим символ '*'
+            }
+            System.out.println();  // Переходим на новую строку после завершения строки
+        }
+    }
+
+    public void guessGame() {
+        Random random = new Random();  // Создаем объект Random для генерации случайных чисел
+        int secretNumber = random.nextInt(10);  // Генерируем случайное число от 0 до 9
+        Scanner scanner = new Scanner(System.in);  // Создаем объект Scanner для считывания данных с клавиатуры
+        int userGuess;  // Переменная для хранения пользовательского ввода
+        int attempts = 0;  // Счетчик попыток
+
+        // Запускаем цикл до тех пор, пока пользователь не угадает число
+        do {
+            System.out.print("Введите число от 0 до 9: ");
+            userGuess = scanner.nextInt();  // Считываем введенное число
+            attempts++;  // Увеличиваем счетчик попыток
+
+            if (userGuess == secretNumber) {
+                System.out.println("Вы угадали!");
+            } else {
+                System.out.println("Вы не угадали, введите число от 0 до 9:");
+            }
+        } while (userGuess != secretNumber);  // Продолжаем, пока пользователь не угадает
+
+        // Выводим количество попыток
+        System.out.println("Вы отгадали число за " + attempts + " попытки(ок).");
+    }
+}
+
+class Module4 {
+    public int findLast(int[] arr, int x) {
+        for (int i = arr.length - 1; i >= 0; i--) {  // Проходим по массиву с конца
+            if (arr[i] == x) {  // Если нашли соответствие
+                return i;  // Возвращаем индекс
+            }
+        }
+        return -1;  // Если не нашли, возвращаем -1
+    }
+
+    public int[] add(int[] arr, int x, int pos) {
+        // Создаем новый массив, который будет на 1 элемент больше
+        int[] newArr = new int[arr.length + 1];
+
+        // Копируем элементы до позиции вставки
+        for (int i = 0; i < pos; i++) {
+            newArr[i] = arr[i];
+        }
+
+        // Вставляем новый элемент
+        newArr[pos] = x;
+
+        // Копируем оставшиеся элементы
+        for (int i = pos; i < arr.length; i++) {
+            newArr[i + 1] = arr[i];
+        }
+
+        return newArr;  // Возвращаем новый массив
+    }
+
+    public void reverse(int[] numbers) {
+        int leftIndex = 0;              // Индекс с начала массива
+        int rightIndex = numbers.length - 1; // Индекс с конца массива
+
+        // Обмен элементов до тех пор, пока индексы не пересекутся
+        while (leftIndex < rightIndex) {
+            // Меняем местами элементы
+            int temp = numbers[leftIndex];
+            numbers[leftIndex] = numbers[rightIndex];
+            numbers[rightIndex] = temp;
+
+            // Сдвигаем индексы
+            leftIndex++;
+            rightIndex--;
+        }
+    }
+
+    public int[] concat(int[] arr1, int[] arr2) {
+        // Создаем новый массив размером, равным сумме размеров arr1 и arr2
+        int[] result = new int[arr1.length + arr2.length];
+
+        // Копируем элементы первого массива в новый массив
+        for (int i = 0; i < arr1.length; i++) {
+            result[i] = arr1[i];
+        }
+
+        // Копируем элементы второго массива в новый массив
+        for (int j = 0; j < arr2.length; j++) {
+            result[arr1.length + j] = arr2[j];
+        }
+
+        return result; // Возвращаем объединенный массив
+    }
+
+    public int[] deleteNegative(int[] arr) {
+        // Считаем количество положительных элементов
+        int positiveCount = 0;
+        for (int num : arr) {
+            if (num >= 0) {
+                positiveCount++;
+            }
+        }
+
+        // Создаем новый массив для положительных элементов
+        int[] result = new int[positiveCount];
+        int index = 0;
+
+        // Заполняем новый массив положительными элементами
+        for (int num : arr) {
+            if (num >= 0) {
+                result[index++] = num; // Увеличиваем индекс только для положительных чисел
+            }
+        }
+
+        return result; // Возвращаем новый массив без отрицательных элементов
+    }
+}
